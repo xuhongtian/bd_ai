@@ -17,9 +17,8 @@ def NN_interpolation(img, dstH, dstW):
     return retimg
 
 
-im_path = '../paojie.jpg'
+im_path = '../pao.jpg'
 image = np.array(Image.open(im_path))
-
 image1 = NN_interpolation(image, image.shape[0] * 2, image.shape[1] * 2)
 image1 = Image.fromarray(image1.astype('uint8')).convert('RGB')
 image1.save('out.png')
